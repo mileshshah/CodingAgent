@@ -10,7 +10,9 @@ var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY")
 var tools = new List<AITool>
 {
     AIFunctionFactory.Create(DateTimeTools.GetCurrentDateTime),
-    AIFunctionFactory.Create(DateTimeTools.CalculateDateDifference)
+    AIFunctionFactory.Create(DateTimeTools.CalculateDateDifference),
+    AIFunctionFactory.Create(FileTools.WriteFile),
+    AIFunctionFactory.Create(InvolkeCommandTools.InvokeCommand)
 };
 
 var chatClient = new OpenAIClient(apiKey)
