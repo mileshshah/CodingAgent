@@ -1,6 +1,6 @@
 using Microsoft.Agents.AI;
 
-namespace CodingAgent.Runner.AgentRunner
+namespace CodingAgent.Runner
 {
     public static class AgentRunner
     {
